@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Received | CWEMS Legal Consulting</title>
+    <title>Retainer Received | CWEMS Legal Consulting</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
-        .container { border: 1px solid #ddd; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: white; }
-        .success-icon { font-size: 48px; color: #27ae60; margin-bottom: 20px; }
-        h1 { color: #2c3e50; }
-        .steps { text-align: left; background: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 5px solid #27ae60; }
-        .btn { display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 40px auto; padding: 20px; text-align: center; }
+        .container { border: 1px solid #ddd; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: white; border-top: 8px solid #2c3e50; }
+        .success-banner { background: #f0fff4; border: 1px solid #c6f6d5; padding: 15px; border-radius: 5px; color: #276749; font-weight: bold; margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .intake-section { text-align: left; background: #f9f9f9; padding: 30px; border-radius: 5px; margin: 20px 0; }
+        h3 { color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 0; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .upload-box { margin-top: 30px; padding: 25px; border: 2px dashed #4285F4; border-radius: 10px; background: #fff; }
+        .btn { display: inline-block; padding: 18px 35px; background: #4285F4; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { background: #357ae8; transform: translateY(-1px); }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="success-icon">✓</div>
-        <h1>Payment Successful</h1>
+        <div class="success-banner">✓ $500.00 Initial Retainer Processed Successfully</div>
+        
+        <h1>Next Steps: Case Intake</h1>
         <p>Thank you for choosing <strong>Central Wisconsin EMS-Legal Consulting LLC</strong>.</p>
         
-        <div class="steps">
-            <strong>Next Steps for Your Case:</strong>
+        <div class="intake-section">
+            <h3>Initiating the Clinical Merit Review</h3>
+            <p>To establish our <strong>7–10 business day turnaround window</strong>, please ensure the "Discovery Packet" is submitted via our secure portal below. To provide a comprehensive clinical and operational analysis, please include:</p>
             <ul>
-                <li><strong>Record Verification:</strong> Please ensure all relevant medical records and legal complaints have been provided.</li>
-                <li><strong>Review Window:</strong> The 7-10 business day clinical merit review window begins once <strong>both</strong> payment and all records are received.</li>
-                <li><strong>Consultation:</strong> I will contact you via email if any clinical clarifications are required during my review.</li>
+                <li><strong>Operations:</strong> Electronic Patient Care Reports (ePCR) and CAD Dispatch Logs.</li>
+                <li><strong>Telematics:</strong> Vehicle AVL Data (including ignition times, speed, and lighting/siren logs).</li>
+                <li><strong>Clinical:</strong> Full Cardiac Monitor data files and relevant Agency Protocols.</li>
             </ul>
+            <p><em>Note: The review window begins once both the retainer and all relevant records are received.</em></p>
         </div>
 
-        <p>A formal receipt has been sent to your email via PayPal.</p>
-        <a href="https://cwemslegal.com" class="btn">Return to Homepage</a>
+        <div class="upload-box">
+            <p><strong>Step 2: Submit Discovery Records</strong></p>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Use our HIPAA-compliant Google portal to securely upload your files.</p>
+            <a href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" class="btn">📤 Upload Case Files Now</a>
+        </div>
+
+        <p style="margin-top: 30px; font-size: 14px; color: #888;">You will receive a Projected Completion Date via email once records are verified.</p>
     </div>
 </body>
 </html>
