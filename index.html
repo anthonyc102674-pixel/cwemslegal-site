@@ -122,6 +122,21 @@
         }
         .submit-btn:hover { background: var(--secondary); }
 
+        /* PayPal Button Styling */
+        .paypal-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .paypal-btn:hover { background: var(--secondary); }
+
         footer {
             text-align: center;
             padding: 3rem;
@@ -257,36 +272,48 @@
 
             <div class="service-card" style="border-top-color: var(--secondary);">
                 <h3>Agency-Specific Protocols</h3>
-                <p>Audit of local clinical guidelines against the established Standard of Care.</p>
+                <p>Audit of local clinical guidelines against the established Wisconsin State Standard of Care.</p>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 3rem; font-size: 0.9rem; color: var(--primary); font-weight: bold;">
-            *Detailed "Request for Production" templates are provided to Counsel upon engagement.
-        </p>
     </section>
 </div>
 
 <section id="engagement">
     <div style="background: var(--white); padding: 3rem; border-radius: 8px; border-left: 8px solid var(--secondary); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
         <h2 style="color: var(--primary); margin-top: 0;">Professional Engagement Model</h2>
-        <p><strong>Central Wisconsin EMS-Legal Consulting LLC</strong> operates on a transparent, tiered fee structure designed to provide maximum value to litigation teams.</p>
+        <p><strong>Central Wisconsin EMS-Legal Consulting LLC</strong> operates on a transparent, tiered fee structure.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
             <div>
                 <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Phase I: Merit Screening</h4>
                 <p style="font-size: 0.95rem;">A flat-rate preliminary review within 7-10 business days to determine case viability.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="anthony.carlson@cwemslegal.com">
+                    <input type="hidden" name="item_name" value="Phase I: Flat-Rate Merit Screening">
+                    <input type="hidden" name="amount" value="300.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <button type="submit" class="paypal-btn">Secure Merit Review ($300)</button>
+                </form>
             </div>
             <div>
                 <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Phase II: Comprehensive Analysis</h4>
                 <p style="font-size: 0.95rem;">Hourly consulting for deep-dive forensic audits, medical chronologies, and HALO procedure reviews.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="anthony.carlson@cwemslegal.com">
+                    <input type="hidden" name="item_name" value="Phase II: Initial Case Retainer">
+                    <input type="hidden" name="amount" value="500.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <button type="submit" class="paypal-btn">Submit Case Retainer ($500)</button>
+                </form>
             </div>
             <div>
                 <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Phase III: Litigation Support</h4>
-                <p style="font-size: 0.95rem;">Expert testimony for depositions and trial with clearly defined professional rates.</p>
+                <p style="font-size: 0.95rem;">Expert testimony for depositions and trial with clearly defined half-day/full-day professional rates.</p>
             </div>
         </div>
         <p style="border-top: 1px solid #eee; padding-top: 1.5rem; font-style: italic; font-size: 0.9rem;">A formal 2026 Fee Schedule and Professional CV are available to Counsel upon request.</p>
-        <a href="#contact" class="cta-button" style="background: var(--primary);">Request Fee Schedule & CV</a>
     </div>
 </section>
 
@@ -294,43 +321,4 @@
     <div class="contact-container">
         <h2 style="text-align: center; color: var(--primary); margin-bottom: 1rem;">Case Consultation Request</h2>
         
-        <div style="text-align: center; margin-bottom: 2rem; padding: 1.5rem; background: #eef2f7; border-radius: 5px; border: 1px dashed var(--primary);">
-            <p style="margin-top: 0; font-weight: bold; color: var(--primary);">Preparing a new case?</p>
-            <p style="font-size: 0.9rem; color: #666;">Download our Clinical Discovery Guide to ensure all "hidden" digital evidence is preserved.</p>
-            <a href="EMS Case Discovery Checklist.pdf" class="cta-button" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;" download>
-                Download Discovery Checklist (PDF)
-            </a>
-        </div>
-
-        <p style="text-align: center; margin-bottom: 2.5rem;">Secure a clinical expert for your next EMS-related case.</p>
-        
-        <form action="https://formspree.io/f/mqegekon" method="POST">
-            <div class="form-group">
-                <label>Attorney Name / Law Firm</label>
-                <input type="text" name="name" required>
-            </div>
-            <div class="form-group">
-                <label>Direct Email Address</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label>Type of Litigation</label>
-                <input type="text" name="subject" placeholder="e.g. Medevac Liability, Paramedic Malpractice">
-            </div>
-            <div class="form-group">
-                <label>Case Summary</label>
-                <textarea name="message" rows="6" required placeholder="Provide a brief overview of the clinical questions at hand..."></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Initialize Case Review</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC. All Rights Reserved.</p>
-    <p>306 South Cedar Street, Nekoosa, WI 54457 | EIN: 41-5176078</p>
-    <p>Providing Merit Reviews, Expert Witness, and Medical Logistics Audits.</p>
-</footer>
-
-</body>
-</html>
+        <div style="text-align: center; margin-bottom
