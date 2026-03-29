@@ -215,6 +215,7 @@
 </section>
 
 <script>
+    // $300 Button Logic
     paypal.Buttons({
         style: { layout: 'vertical', shape: 'rect', label: 'pay' },
         createOrder: function(data, actions) {
@@ -223,10 +224,13 @@
             });
         },
         onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) { window.location.href = "thanks.html"; });
+            return actions.order.capture().then(function(details) { 
+                window.location.href = "thanks.html?type=merit"; 
+            });
         }
     }).render('#paypal-button-container-300');
 
+    // $500 Button Logic
     paypal.Buttons({
         style: { layout: 'vertical', shape: 'rect', label: 'pay' },
         createOrder: function(data, actions) {
@@ -235,7 +239,9 @@
             });
         },
         onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) { window.location.href = "thanks.html"; });
+            return actions.order.capture().then(function(details) { 
+                window.location.href = "thanks.html?type=retainer"; 
+            });
         }
     }).render('#paypal-button-container-500');
 </script>
