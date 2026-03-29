@@ -3,47 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retainer Received | CWEMS Legal Consulting</title>
+    <title>Payment Successful | CW EMS-Legal Consulting</title>
+    <meta http-equiv="refresh" content="3; url=EMS Case Discovery Checklist.pdf">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 40px auto; padding: 20px; text-align: center; }
-        .container { border: 1px solid #ddd; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: white; border-top: 8px solid #2c3e50; }
-        .success-banner { background: #f0fff4; border: 1px solid #c6f6d5; padding: 15px; border-radius: 5px; color: #276749; font-weight: bold; margin-bottom: 30px; }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        .intake-section { text-align: left; background: #f9f9f9; padding: 30px; border-radius: 5px; margin: 20px 0; }
-        h3 { color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 0; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .upload-box { margin-top: 30px; padding: 25px; border: 2px dashed #4285F4; border-radius: 10px; background: #fff; }
-        .btn { display: inline-block; padding: 18px 35px; background: #4285F4; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn:hover { background: #357ae8; transform: translateY(-1px); }
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6;
+            text-align: center;
+        }
+        .container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        h1 { color: var(--primary); margin-bottom: 1rem; }
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        p { color: #555; line-height: 1.6; }
+        .next-steps {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-left: 5px solid var(--secondary);
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="success-banner">✓ $500.00 Initial Retainer Processed Successfully</div>
-        
-        <h1>Next Steps: Case Intake</h1>
-        <p>Thank you for choosing <strong>Central Wisconsin EMS-Legal Consulting LLC</strong>.</p>
-        
-        <div class="intake-section">
-            <h3>Initiating the Clinical Merit Review</h3>
-            <p>To establish our <strong>7–10 business day turnaround window</strong>, please ensure the "Discovery Packet" is submitted via our secure portal below. To provide a comprehensive clinical and operational analysis, please include:</p>
-            <ul>
-                <li><strong>Operations:</strong> Electronic Patient Care Reports (ePCR) and CAD Dispatch Logs.</li>
-                <li><strong>Telematics:</strong> Vehicle AVL Data (including ignition times, speed, and lighting/siren logs).</li>
-                <li><strong>Clinical:</strong> Full Cardiac Monitor data files and relevant Agency Protocols.</li>
-            </ul>
-            <p><em>Note: The review window begins once both the retainer and all relevant records are received.</em></p>
-        </div>
 
-        <div class="upload-box">
-            <p><strong>Step 2: Submit Discovery Records</strong></p>
-            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Use our HIPAA-compliant Google portal to securely upload your files.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrNumyipWHs3vA4p--K1ne8o3PjuAxzsEP313sPeff9CH1pQ/viewform?usp=sf_link" class="btn">📤 Upload Case Files Now</a>
-        </div>
-
-        <p style="margin-top: 30px; font-size: 14px; color: #888;">You will receive a Projected Completion Date via email once records are verified.</p>
-        <p><a href="https://cwemslegal.com" style="color: #2c3e50; text-decoration: none; font-size: 14px;">Return to Homepage</a></p>
+<div class="container">
+    <div class="success-icon">✓</div>
+    <h1>Payment Received</h1>
+    <p>Thank you for engaging <strong>Central Wisconsin EMS-Legal Consulting LLC</strong>. Your transaction has been completed, and a receipt for your purchase has been emailed to you.</p>
+    
+    <div class="next-steps">
+        <h3 style="margin-top: 0; color: var(--primary);">Next Steps:</h3>
+        <ol>
+            <li><strong>Download Checklist:</strong> Your Discovery Requirements Guide should begin downloading automatically. If it doesn't, <a href="EMS Case Discovery Checklist.pdf" download>click here</a>.</li>
+            <li><strong>Secure File Drop:</strong> Within 4 business hours, you will receive an email invitation to a secure folder for the transmission of ePCRs, waveforms, and data logs.</li>
+            <li><strong>Review:</strong> Your Phase I Merit Screening will be delivered within 7-10 business days of document receipt.</li>
+        </ol>
     </div>
+
+    <a href="index.html" class="btn">Return to Website</a>
+</div>
+
 </body>
 </html>
