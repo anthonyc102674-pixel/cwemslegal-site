@@ -191,7 +191,7 @@
     </section>
 </div>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AQJ8oSMyUbPGiaPHAK1SMAjUX0vvYzcAJrTWjV0tua3d-qUIaliTGaBYNgJ1ZiQpgjklursXdecDf6zx&currency=USD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AQJ8oSMyUbPGiaPHAK1SMAjUX0vvYzcAJrTWjV0tua3d-qUIaliTGaBYNgJ1ZiQpgjklursXdecDf6zx&currency=USD&disable-funding=credit,paylater&enable-funding=venmo"></script>
 
 <section id="engagement">
     <div style="background: var(--white); padding: 3rem; border-radius: 8px; border-left: 8px solid var(--secondary); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -215,7 +215,6 @@
 </section>
 
 <script>
-    // $300 Button
     paypal.Buttons({
         style: { layout: 'vertical', shape: 'rect', label: 'pay' },
         createOrder: function(data, actions) {
@@ -228,7 +227,6 @@
         }
     }).render('#paypal-button-container-300');
 
-    // $500 Button
     paypal.Buttons({
         style: { layout: 'vertical', shape: 'rect', label: 'pay' },
         createOrder: function(data, actions) {
@@ -254,3 +252,17 @@
 
         <form action="https://formspree.io/f/mqegekon" method="POST">
             <div class="form-group"><label>Attorney Name / Law Firm</label><input type="text" name="name" required></div>
+            <div class="form-group"><label>Direct Email Address</label><input type="email" name="email" required></div>
+            <div class="form-group"><label>Case Summary</label><textarea name="message" rows="4" required placeholder="Brief clinical overview..."></textarea></div>
+            <button type="submit" class="submit-btn">Initialize Case Review</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC. All Rights Reserved.</p>
+    <p>306 South Cedar Street, Nekoosa, WI 54457 | EIN: 41-5176078</p>
+</footer>
+
+</body>
+</html>
