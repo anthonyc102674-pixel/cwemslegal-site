@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Received | CW EMS-Legal</title>
+    <title>Payment Received | CW EMS-Legal&#8480;</title>
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f7f6; }
         .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
         .check { color: #28a745; font-size: 50px; }
-        h1 { color: #1a2a6c; }
+        h1 { color: #1a2a6c; margin-bottom: 10px; }
         .next-steps { text-align: left; background: #fdfdfd; padding: 20px; border-left: 5px solid #b21f1f; margin-top: 20px; }
-        .btn { background: #1a2a6c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
+        .btn { background: #1a2a6c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: #b21f1f; }
+        a { color: #b21f1f; font-weight: bold; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="check">✔</div>
         <h1 id="headline">Payment Received</h1>
-        <p>Thank you for engaging <strong>Central Wisconsin EMS-Legal Consulting LLC</strong>.</p>
+        <p>Thank you for engaging <strong>Central Wisconsin EMS-Legal Consulting LLC&#8480;</strong>.</p>
         
         <div class="next-steps">
             <h3 id="service-title">Next Steps:</h3>
-            <p id="service-desc">We are processing your request. You will receive an email within 4 business hours.</p>
+            <p id="service-desc">Your request is being processed. You will receive a confirmation email within 1 to 2 business days.</p>
         </div>
 
         <a href="index.html" class="btn">Return to Website</a>
     </div>
 
     <script>
-        // This script looks at the URL (e.g., ?type=merit) and changes the text
+        // Captures the ?type= from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const type = urlParams.get('type');
         
@@ -36,14 +39,20 @@
         const desc = document.getElementById('service-desc');
         const headline = document.getElementById('headline');
 
+        const timeframe = "Our office will contact you via email within 1 to 2 business days. ";
+        const checklist = "In the meantime, please download and review the <a href='EMS Case Discovery Checklist.pdf'>EMS Case Discovery Checklist</a> to begin gathering the necessary clinical and operational data.";
+
         if (type === 'merit') {
-            headline.innerText = "Merit Review Initialized";
+            headline.innerHTML = "Merit Review Initialized&#8480;";
             title.innerText = "Phase I: Merit Screening";
-            desc.innerText = "Your preliminary report will be delivered within 7-10 business days once all medical records are received.";
+            desc.innerHTML = timeframe + checklist + "<br><br><em>Note: Preliminary reports are typically delivered 7-10 business days after all records are received.</em>";
         } else if (type === 'retainer') {
-            headline.innerText = "Case Retainer Confirmed";
+            headline.innerHTML = "Case Retainer Confirmed&#8480;";
             title.innerText = "Phase II: Comprehensive Support";
-            desc.innerText = "We will contact your firm shortly to schedule a strategy call and finalize the expert testimony timeline.";
+            desc.innerHTML = timeframe + "We will schedule a formal strategy call shortly to finalize the litigation support timeline. " + checklist;
+        } else {
+            // General fallback text
+            desc.innerHTML = timeframe + checklist;
         }
     </script>
 </body>
