@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-H3EX5P7PJP');
     </script>
 
@@ -17,7 +16,8 @@
     <style>
         :root {
             --primary: #1a2a6c;
-             --secondary: #b21f1f; 
+            --secondary: #b21f1f; 
+            --brand-red: #631d27; /* Matched to your shield logo */
             --text: #333;
             --light: #f4f7f6;
             --white: #ffffff;
@@ -45,14 +45,14 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .logo {
+        .logo-nav {
             font-weight: bold;
             color: var(--primary);
             font-size: 1.2rem;
             text-decoration: none;
         }
 
-        nav a:not(.logo) {
+        nav a:not(.logo-nav) {
             margin-left: 1.5rem;
             text-decoration: none;
             color: var(--text);
@@ -61,85 +61,88 @@
         }
 
         header {
-            background: linear-gradient(rgba(26, 42, 108, 0.9), rgba(26, 42, 108, 0.9)), url('https://images.unsplash.com/photo-1584931423298-c576fda54bd2?auto=format&fit=crop&q=80&w=2000') center/cover;
-            padding: 6rem 2rem;
+            background: linear-gradient(rgba(26, 42, 108, 0.92), rgba(26, 42, 108, 0.92)), url('https://images.unsplash.com/photo-1584931423298-c576fda54bd2?auto=format&fit=crop&q=80&w=2000') center/cover;
+            padding: 4rem 2rem;
             text-align: center;
             color: var(--white);
         }
 
-        .hero-content { max-width: 900px; margin: 0 auto; }
-        .hero-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        .hero-content h3 { font-weight: 300; margin-bottom: 2rem; border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 0.5rem; }
+        .hero-content { max-width: 950px; margin: 0 auto; }
+
+        .hero-logo {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
+        }
+
+        .brand-name-top {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff; /* Bright white for high contrast */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .brand-name-llc {
+            color: #d1d1d1; /* Slight grey for the suffix to keep focus on main name */
+            font-size: 1.2rem;
+        }
+
+        .hero-content h1 { 
+            font-size: 2.8rem; 
+            margin-top: 1rem;
+            margin-bottom: 1.5rem; 
+            line-height: 1.2;
+        }
+
+        .hero-content h3 { 
+            font-weight: 400; 
+            margin-bottom: 2rem; 
+            border-bottom: 3px solid var(--brand-red); 
+            display: inline-block; 
+            padding-bottom: 0.5rem; 
+            letter-spacing: 1px;
+        }
 
         .cta-button {
-            background: var(--secondary);
+            background: var(--brand-red);
             color: var(--white);
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .cta-button:hover { background: #d02a2a; transform: translateY(-2px); }
+        .cta-button:hover { background: #4a151d; transform: translateY(-2px); }
 
+        /* The rest of your existing CSS below... */
         section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
         .section-title { text-align: center; color: var(--primary); margin-bottom: 3rem; }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-top: 5px solid var(--primary);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .contact-container {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 5px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        .contact-container { background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         form { display: grid; gap: 1.5rem; }
         .form-group { display: flex; flex-direction: column; }
         label { font-weight: bold; margin-bottom: 0.5rem; color: var(--primary); }
         input, textarea { padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; }
-
-        .submit-btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .submit-btn:hover { background: #d02a2a; }
-
-        footer {
-            text-align: center;
-            padding: 3rem;
-            background: #111;
-            color: #888;
-            font-size: 0.9rem;
-        }
+        .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: 0.3s; }
+        .submit-btn:hover { background: var(--brand-red); }
+        footer { text-align: center; padding: 3rem; background: #111; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#" class="logo">CW EMS-Legal&#8480;</a>
+    <a href="#" class="logo-nav">CW EMS-Legal℠</a>
     <div>
         <a href="#about">About</a>
         <a href="#discovery">Discovery</a>
@@ -150,16 +153,18 @@
 
 <header>
     <div class="hero-content">
-       <h1>Clinical Reality Meets Legal Precision</h1>
-       <p>
-            <strong>Central Wisconsin EMS-Legal Consulting LLC&#8480;</strong> bridges the gap between complex clinical care and legal strategy, leveraging over 30 years of experience in the public safety and clinical sectors—including 911 response, Critical Care Transport, U.S. Army logistics, and municipal governance.
-       </p>
-       <h3>Anthony W. Carlson, CCEMT-P</h3>
-       <p style="font-size: 1rem; color: #ccc;">Principal Consultant & Managing Member</p>
-       <a href="#contact" class="cta-button">Request a Case Review</a>
+        <img src="logo.png" alt="CW EMS-Legal Shield" class="hero-logo">
+        
+        <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting <span class="brand-name-llc">LLC℠</span></span>
+        
+        <h1>Clinical Reality Meets Legal Precision</h1>
+        
+        <h3>Anthony W. Carlson, CCEMT-P</h3>
+        <p style="font-size: 1.1rem; color: #d1d1d1; margin-bottom: 2.5rem;">Principal Consultant & Managing Member</p>
+        
+        <a href="#contact" class="cta-button">Request a Case Review</a>
     </div>
 </header>
-
 <section id="about">
     <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 300px; text-align: center;">
