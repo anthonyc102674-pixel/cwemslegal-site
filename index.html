@@ -17,7 +17,7 @@
         :root {
             --primary: #1a2a6c;
             --secondary: #b21f1f; 
-            --brand-red: #631d27; /* Matched to your shield logo */
+            --brand-red: #631d27;
             --text: #333;
             --light: #f4f7f6;
             --white: #ffffff;
@@ -33,7 +33,7 @@
             background-color: var(--light);
         }
 
-        /* Navigation Styling */
+        /* Navigation */
         nav {
             background: var(--white);
             padding: 1rem 2rem;
@@ -52,7 +52,6 @@
             color: var(--primary);
             font-size: 1.4rem;
             text-decoration: none;
-            letter-spacing: 1px;
         }
 
         nav a:not(.logo-nav) {
@@ -60,24 +59,22 @@
             text-decoration: none;
             color: var(--text);
             font-weight: 500;
-            font-size: 0.9rem;
         }
 
-        /* Header / Hero Section */
+        /* Hero Section */
         header {
-            background: linear-gradient(rgba(26, 42, 108, 0.92), rgba(26, 42, 108, 0.92)), url('https://images.unsplash.com/photo-1584931423298-c576fda54bd2?auto=format&fit=crop&q=80&w=2000') center/cover;
-            padding: 4rem 2rem;
+            background: var(--primary);
+            padding: 5rem 2rem;
             text-align: center;
             color: var(--white);
         }
 
-        .hero-content { max-width: 950px; margin: 0 auto; }
-
         .hero-logo {
-            width: 180px;
+            width: 240px; 
             height: auto;
             margin-bottom: 1.5rem;
-            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.4));
+            /* Removes white background from logo.png on navy */
+            mix-blend-mode: multiply; 
         }
 
         .brand-name-top {
@@ -87,43 +84,41 @@
             color: #ffffff; 
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 0.5rem;
             display: block;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            margin-bottom: 1rem;
         }
 
         .hero-content h1 { 
             font-size: 2.8rem; 
             color: #ffffff;
-            margin-top: 1rem;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-weight: 300; 
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-area-badge {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+            font-style: italic;
+            margin-bottom: 2rem;
+            display: block;
         }
 
         .hero-content h3 { 
             font-weight: 300; 
             color: #ffffff;
-            margin-bottom: 2rem; 
             border-bottom: 3px solid #ffffff; 
             display: inline-block; 
             padding-bottom: 0.5rem; 
-            letter-spacing: 1px;
-            animation: accentShine 2s infinite ease-in-out;
+            margin-bottom: 1rem;
         }
 
         .credential-accent {
-            color: var(--brand-red);
+            color: #ff4d4d; 
             font-weight: bold;
         }
 
-        @keyframes accentShine {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-            100% { opacity: 0.8; }
-        }
-
-        /* Buttons */
         .cta-button {
             background: var(--brand-red);
             color: var(--white);
@@ -131,32 +126,16 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: 0.3s;
             display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .cta-button:hover { background: #4a151d; transform: translateY(-2px); }
-
-        /* Sections & Content */
         section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
         .section-title { text-align: center; color: var(--primary); margin-bottom: 3rem; }
         
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 5px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        
-        .contact-container { background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        form { display: grid; gap: 1.5rem; }
-        .form-group { display: flex; flex-direction: column; }
-        label { font-weight: bold; margin-bottom: 0.5rem; color: var(--primary); }
-        input, textarea { padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; }
-        
-        .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: 0.3s; }
-        .submit-btn:hover { background: var(--brand-red); }
-        
         footer { text-align: center; padding: 3rem; background: #111; color: #888; font-size: 0.9rem; }
+        .footer-highlight { color: #ccc; font-weight: bold; margin-bottom: 10px; display: block; }
     </style>
 </head>
 <body>
@@ -174,135 +153,25 @@
 <header>
     <div class="hero-content">
         <img src="logo.png" alt="CW EMS-Legal Shield" class="hero-logo">
-        
         <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting LLC℠</span>
-        
         <h1>Clinical Reality Meets Legal Precision</h1>
+        <span class="service-area-badge">Proudly Serving all of Wisconsin</span>
         
         <h3>Anthony W. Carlson, <span class="credential-accent">CCEMT-P</span></h3>
-        <p style="font-size: 1.1rem; color: #d1d1d1; margin-bottom: 2.5rem;">Principal Consultant & Managing Member</p>
-        
+        <p style="color: #d1d1d1;">Principal Consultant & Managing Member</p>
         <a href="#contact" class="cta-button">Request a Case Review</a>
     </div>
 </header>
 
 <section id="about">
-    <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 300px; text-align: center;">
-            <img src="headshot.png.jpg" alt="Anthony W. Carlson, CCEMT-P" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid var(--primary);">
-        </div>
-        <div style="flex: 2; min-width: 300px;">
-            <h2 style="color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px;">
-                Expert Medical-Legal Consulting
-            </h2>
-            <p style="font-size: 1.1rem; margin-top: 20px;">
-                I provide legal teams with a unique "Tactical-to-Clinical" perspective built on a 30-year foundation of service. From early medical response in Amherst to 15 years as a Critical Care Paramedic and high-stakes U.S. Army logistics, I analyze clinical documentation and operational systems through the lens of mission-readiness and public policy.
-            </p>
-            <a href="Resume_2026.pdf" class="cta-button" style="background: var(--primary); margin-top: 1rem;" download>
-                Download Professional CV
-            </a>
-        </div>
-    </div>
-</section>
-
-<div style="background-color: #f8f9fa; border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
-    <section id="discovery">
-        <h2 class="section-title">Forensic Data & Discovery Requirements</h2>
-        <div class="services">
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <h3>Cardiac Monitor Data</h3>
-                <p>Forensic mapping of ECG and EtCO2 waveforms typically absent from standard medical records.</p>
-            </div>
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <h3>Ventilator Analytics</h3>
-                <p>Digital audit of breath-by-breath mechanics and alarm response logs for transport ventilators.</p>
-            </div>
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <h3>CAD & AVL Telematics</h3>
-                <p>Millisecond-accurate dispatch logs and GPS telematics for objective timeline reconstruction.</p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<script src="https://www.paypal.com/sdk/js?client-id=AQJ8oSMyUbPGiaPHAK1SMAjUX0vvYzcAJrTWjV0tua3d-qUIaliTGaBYNgJ1ZiQpgjklursXdecDf6zx&currency=USD&disable-funding=credit,paylater&enable-funding=venmo"></script>
-
-<section id="engagement">
-    <div style="background: var(--white); padding: 3rem; border-radius: 8px; border-left: 8px solid var(--secondary); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <h2 style="color: var(--primary); margin-top: 0; text-align: center;">Engagement & Retainers</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
-            
-            <div style="padding: 1.5rem; background: #fdfdfd; border: 1px solid #eee; border-radius: 8px;">
-                <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Phase I: Merit Screening</h4>
-                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Flat-rate screening (7-10 day turnaround) to determine case viability and deviations.</p>
-                <div id="paypal-button-container-300"></div>
-            </div>
-
-            <div style="padding: 1.5rem; background: #fdfdfd; border: 1px solid #eee; border-radius: 8px;">
-                <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Phase II: Case Retainer</h4>
-                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Initial retainer for comprehensive analysis, expert testimony, and litigation support.</p>
-                <div id="paypal-button-container-500"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-    // $300 Button Logic
-    paypal.Buttons({
-        style: { layout: 'vertical', shape: 'rect', label: 'pay' },
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{ description: "Phase I: Merit Screening", amount: { value: '300.00' } }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) { 
-                window.location.href = "thanks.html?type=merit"; 
-            });
-        }
-    }).render('#paypal-button-container-300');
-
-    // $500 Button Logic
-    paypal.Buttons({
-        style: { layout: 'vertical', shape: 'rect', label: 'pay' },
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{ description: "Phase II: Case Retainer", amount: { value: '500.00' } }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) { 
-                window.location.href = "thanks.html?type=retainer"; 
-            });
-        }
-    }).render('#paypal-button-container-500');
-</script>
-
-<section id="contact">
-    <div class="contact-container">
-        <h2 style="text-align: center; color: var(--primary);">Case Consultation Request</h2>
-        <div style="text-align: center; margin-bottom: 2rem; padding: 1.5rem; background: #eef2f7; border-radius: 5px; border: 1px dashed var(--primary);">
-            <p style="margin: 0 0 10px 0; font-weight: bold;">New Case Intake</p>
-            <a href="EMS Case Discovery Checklist.pdf" class="cta-button" style="padding: 0.5rem 1rem; font-size: 0.8rem;" download>
-                Download Discovery Checklist (PDF)
-            </a>
-        </div>
-
-        <form action="https://formspree.io/f/mqegekon" method="POST">
-            <div class="form-group"><label>Attorney Name / Law Firm</label><input type="text" name="name" required></div>
-            <div class="form-group"><label>Direct Email Address</label><input type="email" name="email" required></div>
-            <div class="form-group"><label>Case Summary</label><textarea name="message" rows="4" required placeholder="Brief clinical overview..."></textarea></div>
-            <button type="submit" class="submit-btn">Initialize Case Review</button>
-        </form>
-    </div>
+    <h2 class="section-title">Expert Medical-Legal Consulting</h2>
+    <p>I provide legal teams with a unique "Tactical-to-Clinical" perspective built on a 30-year foundation of service. From high-stakes U.S. Army logistics to 15 years as a Critical Care Paramedic, I analyze clinical documentation and operational systems through the lens of mission-readiness and public policy.</p>
 </section>
 
 <footer>
+    <span class="footer-highlight">Proudly Serving all of Wisconsin</span>
     <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC℠. All Rights Reserved.</p>
-    <p>306 Cedar St, Nekoosa, WI 54457 | EIN: 41-5176078</p>
+    <p> Nekoosa, WI 54457</p>
 </footer>
 
 </body>
