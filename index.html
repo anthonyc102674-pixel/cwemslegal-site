@@ -81,32 +81,46 @@
         }
 
         .brand-name-top {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 2.4rem;
+            font-family: 'Times New Roman', Times, serif; 
+            font-size: 2.6rem;
             font-weight: bold;
-            color: var(--brand-red); 
+            color: #ffffff; 
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             margin-bottom: 0.5rem;
             display: block;
-            text-shadow: 0px 0px 8px rgba(255,255,255,0.25);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
         }
 
         .hero-content h1 { 
             font-size: 2.8rem; 
+            color: #ffffff;
             margin-top: 1rem;
-            margin-bottom: 1.5rem; 
-            line-height: 1.2;
-            font-weight: 300;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
 
         .hero-content h3 { 
-            font-weight: 400; 
+            font-weight: 300; 
+            color: #ffffff;
             margin-bottom: 2rem; 
-            border-bottom: 3px solid var(--brand-red); 
+            border-bottom: 3px solid #ffffff; 
             display: inline-block; 
             padding-bottom: 0.5rem; 
             letter-spacing: 1px;
+            animation: accentShine 2s infinite ease-in-out;
+        }
+
+        .credential-accent {
+            color: var(--brand-red);
+            font-weight: bold;
+        }
+
+        @keyframes accentShine {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+            100% { opacity: 0.8; }
         }
 
         /* Buttons */
@@ -165,7 +179,7 @@
         
         <h1>Clinical Reality Meets Legal Precision</h1>
         
-        <h3>Anthony W. Carlson, CCEMT-P</h3>
+        <h3>Anthony W. Carlson, <span class="credential-accent">CCEMT-P</span></h3>
         <p style="font-size: 1.1rem; color: #d1d1d1; margin-bottom: 2.5rem;">Principal Consultant & Managing Member</p>
         
         <a href="#contact" class="cta-button">Request a Case Review</a>
