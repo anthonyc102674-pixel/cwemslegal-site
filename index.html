@@ -16,7 +16,6 @@
     <style>
         :root {
             --primary: #1a2a6c;
-            --secondary: #b21f1f; 
             --brand-red: #631d27;
             --text: #333;
             --light: #f4f7f6;
@@ -28,6 +27,7 @@
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
+            padding: 0;
             color: var(--text);
             line-height: 1.6;
             background-color: var(--light);
@@ -54,57 +54,41 @@
             text-decoration: none;
         }
 
-        nav a:not(.logo-nav) {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        /* Hero Section */
+        /* Hero / Blue Banner */
         header {
             background: var(--primary);
             padding: 5rem 2rem;
             text-align: center;
             color: var(--white);
+            width: 100%;
+            display: block; /* Ensures it doesn't collapse */
         }
 
-        /* LOGO BADGE FIX */
         .logo-badge {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             background: white;
-            border-radius: 50%; /* Makes it a circle */
+            border-radius: 50%;
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            border: 4px solid var(--brand-red); /* Matches your logo maroon */
+            border: 4px solid var(--brand-red);
             overflow: hidden;
         }
 
         .hero-logo {
-            width: 90%; /* Fits nicely inside the circle */
+            width: 85%;
             height: auto;
         }
 
         .brand-name-top {
             font-family: 'Times New Roman', Times, serif; 
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: bold;
-            color: #ffffff; 
             text-transform: uppercase;
-            letter-spacing: 2px;
             display: block;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-content h1 { 
-            font-size: 2.2rem; 
-            color: #ffffff;
-            font-weight: 300; 
             margin-bottom: 0.5rem;
         }
 
@@ -114,77 +98,83 @@
             font-style: italic;
             display: block;
             margin-bottom: 2rem;
-            letter-spacing: 1px;
         }
 
-        .hero-content h3 { 
-            font-weight: 300; 
-            color: #ffffff;
-            border-bottom: 3px solid #ffffff; 
-            display: inline-block; 
-            padding-bottom: 0.5rem; 
-            margin-bottom: 1rem;
+        /* Main Content Sections */
+        section { 
+            padding: 4rem 2rem; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: transparent;
         }
 
-        .credential-accent {
-            color: #ff4d4d; 
-            font-weight: bold;
+        .section-title { 
+            text-align: center; 
+            color: var(--primary); 
+            margin-bottom: 2rem;
+            font-size: 2rem;
         }
+
+        .credential-accent { color: #ff4d4d; font-weight: bold; }
 
         .cta-button {
             background: var(--brand-red);
             color: var(--white);
-            padding: 1.2rem 3rem;
+            padding: 1rem 2.5rem;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             display: inline-block;
             margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 3rem; }
-        
-        footer { text-align: center; padding: 3rem; background: #111; color: #888; font-size: 0.9rem; }
-        .footer-tagline { color: #ccc; font-weight: bold; display: block; margin-bottom: 10px; }
+        footer { 
+            text-align: center; 
+            padding: 3rem; 
+            background: #111; 
+            color: #888; 
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="#" class="logo-nav">CW EMS-Legal℠</a>
-    <div>
-        <a href="#about">About</a>
-        <a href="#discovery">Discovery</a>
-        <a href="#engagement">Engagement</a>
-        <a href="#contact">Contact</a>
+    <div class="nav-links">
+        <a href="#about" style="text-decoration:none; color:var(--text); margin-left:15px;">About</a>
+        <a href="#contact" style="text-decoration:none; color:var(--text); margin-left:15px;">Contact</a>
     </div>
 </nav>
 
 <header>
-    <div class="hero-content">
-        <div class="logo-badge">
-            <img src="logo.png" alt="CW EMS-Legal Shield" class="hero-logo">
-        </div>
-        
-        <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting LLC℠</span>
-        <h1>Clinical Reality Meets Legal Precision</h1>
-        <span class="service-area">Proudly Serving all of Wisconsin</span>
-        
-        <h3>Anthony W. Carlson, <span class="credential-accent">CCEMT-P</span></h3>
-        <p style="color: #d1d1d1;">Principal Consultant & Managing Member</p>
-        <a href="#contact" class="cta-button">Request a Case Review</a>
+    <div class="logo-badge">
+        <img src="logo.png" alt="CW EMS-Legal Shield" class="hero-logo">
     </div>
+    <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting LLC℠</span>
+    <h1>Clinical Reality Meets Legal Precision</h1>
+    <span class="service-area">Proudly Serving all of Wisconsin</span>
+    <h3>Anthony W. Carlson, <span class="credential-accent">CCEMT-P</span></h3>
+    <p style="color: #d1d1d1;">Principal Consultant & Managing Member</p>
+    <a href="#contact" class="cta-button">Request a Case Review</a>
 </header>
 
-<section id="about">
-    <h2 class="section-title">Expert Medical-Legal Consulting</h2>
-    <p>I provide legal teams with a unique "Tactical-to-Clinical" perspective built on a 30-year foundation of service. From high-stakes U.S. Army logistics to 15 years as a Critical Care Paramedic, I analyze clinical documentation and operational systems through the lens of mission-readiness and public policy.</p>
-</section>
+<main>
+    <section id="about">
+        <h2 class="section-title">Expert Medical-Legal Consulting</h2>
+        <p>I provide legal teams with a unique "Tactical-to-Clinical" perspective built on a 30-year foundation of service. From high-stakes U.S. Army logistics to 15 years as a Critical Care Paramedic, I analyze clinical documentation and operational systems through the lens of mission-readiness and public policy.</p>
+    </section>
+
+    <section id="contact" style="text-align:center;">
+        <h2 class="section-title">Contact</h2>
+        <p>Professional inquiries can be directed to the office in Nekoosa, WI.</p>
+        <p><strong>Email:</strong> (Insert Email Here)</p>
+    </section>
+</main>
 
 <footer>
-    <span class="footer-tagline">Proudly Serving all of Wisconsin</span>
+    <p style="color:#ccc; font-weight:bold;">Proudly Serving all of Wisconsin</p>
     <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC℠. All Rights Reserved.</p>
     <p>306 Cedar St, Nekoosa, WI 54457</p>
 </footer>
