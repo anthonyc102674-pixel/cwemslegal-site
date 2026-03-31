@@ -33,6 +33,7 @@
             background-color: var(--light);
         }
 
+        /* Navigation Styling */
         nav {
             background: var(--white);
             padding: 1rem 2rem;
@@ -46,10 +47,12 @@
         }
 
         .logo-nav {
+            font-family: 'Times New Roman', Times, serif;
             font-weight: bold;
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         nav a:not(.logo-nav) {
@@ -60,6 +63,7 @@
             font-size: 0.9rem;
         }
 
+        /* Header / Hero Section */
         header {
             background: linear-gradient(rgba(26, 42, 108, 0.92), rgba(26, 42, 108, 0.92)), url('https://images.unsplash.com/photo-1584931423298-c576fda54bd2?auto=format&fit=crop&q=80&w=2000') center/cover;
             padding: 4rem 2rem;
@@ -70,26 +74,22 @@
         .hero-content { max-width: 950px; margin: 0 auto; }
 
         .hero-logo {
-            width: 150px; /* Adjust size as needed */
+            width: 180px;
             height: auto;
             margin-bottom: 1.5rem;
-            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
+            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.4));
         }
 
         .brand-name-top {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #ffffff; /* Bright white for high contrast */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: var(--brand-red); 
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 0.5rem;
             display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .brand-name-llc {
-            color: #d1d1d1; /* Slight grey for the suffix to keep focus on main name */
-            font-size: 1.2rem;
+            text-shadow: 0px 0px 8px rgba(255,255,255,0.25);
         }
 
         .hero-content h1 { 
@@ -97,6 +97,7 @@
             margin-top: 1rem;
             margin-bottom: 1.5rem; 
             line-height: 1.2;
+            font-weight: 300;
         }
 
         .hero-content h3 { 
@@ -108,6 +109,7 @@
             letter-spacing: 1px;
         }
 
+        /* Buttons */
         .cta-button {
             background: var(--brand-red);
             color: var(--white);
@@ -124,18 +126,22 @@
 
         .cta-button:hover { background: #4a151d; transform: translateY(-2px); }
 
-        /* The rest of your existing CSS below... */
+        /* Sections & Content */
         section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
         .section-title { text-align: center; color: var(--primary); margin-bottom: 3rem; }
+        
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .service-card { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 5px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        
         .contact-container { background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         form { display: grid; gap: 1.5rem; }
         .form-group { display: flex; flex-direction: column; }
         label { font-weight: bold; margin-bottom: 0.5rem; color: var(--primary); }
         input, textarea { padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; }
+        
         .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: 0.3s; }
         .submit-btn:hover { background: var(--brand-red); }
+        
         footer { text-align: center; padding: 3rem; background: #111; color: #888; font-size: 0.9rem; }
     </style>
 </head>
@@ -155,7 +161,7 @@
     <div class="hero-content">
         <img src="logo.png" alt="CW EMS-Legal Shield" class="hero-logo">
         
-        <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting <span class="brand-name-llc">LLC℠</span></span>
+        <span class="brand-name-top">Central Wisconsin EMS-Legal Consulting LLC℠</span>
         
         <h1>Clinical Reality Meets Legal Precision</h1>
         
@@ -165,6 +171,7 @@
         <a href="#contact" class="cta-button">Request a Case Review</a>
     </div>
 </header>
+
 <section id="about">
     <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 300px; text-align: center;">
@@ -280,7 +287,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC&#8480;. All Rights Reserved.</p>
+    <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC℠. All Rights Reserved.</p>
     <p>306 Cedar St, Nekoosa, WI 54457 | EIN: 41-5176078</p>
 </footer>
 
