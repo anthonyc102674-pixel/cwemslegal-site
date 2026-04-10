@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Audit Portal | CW EMS-Legal℠</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Simple client-side password gate
+        var code = prompt("Please enter your Client Access Code:");
+        if (code !== "CW2026") {
+            alert("Access Denied. Please contact Anthony for your agency code.");
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-nav">CW EMS-Legal℠</a>
+        <span style="color: var(--secondary); font-weight: bold; margin-left: 20px;">CONFIDENTIAL CLIENT PORTAL</span>
+    </nav>
+
+    <header style="padding: 2rem; background: var(--primary); text-align: center;">
+        <h1 style="color: white;">PPAEMA Forensic Readiness Audit</h1>
+        <p style="color: #ccc;">Authorized Agency Assessment Environment</p>
+    </header>
+
+    <section style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <form action="https://formspree.io/f/mqegekon" method="POST">
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px;">
+                 <label>Agency Name</label>
+                 <input type="text" name="Agency" required style="width: 100%; margin-bottom: 1rem;">
+                 
+                 <h3>Section 1: Registration</h3>
+                 <p>1.1 DEA EMS Agency Registration obtained per state?</p>
+                 <select name="1.1" style="width: 100%; margin-bottom: 1rem;">
+                     <option>Yes</option><option>No</option><option>N/A</option>
+                 </select>
+
+                 <button type="submit" style="background: var(--secondary); color: white; padding: 1rem 2rem; width: 100%; border: none; cursor: pointer;">
+                     Submit Audit for Principal Review
+                 </button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
