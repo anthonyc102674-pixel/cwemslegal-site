@@ -70,12 +70,12 @@
 </section>
 
 <section id="agency-contact" style="background: var(--white); padding: 5rem 2rem;">
-    <div class="contact-container" style="border-top: 5px solid var(--secondary); max-width: 800px; margin: 0 auto;">
+    <div class="contact-container" style="border-top: 5px solid var(--secondary); max-width: 900px; margin: 0 auto;">
         <h2 style="text-align: center; color: var(--primary); margin-bottom: 0.5rem;">Initialize Agency Consultation</h2>
         <p style="text-align: center; margin-bottom: 2.5rem; color: #666;">Request a formal proposal for readiness audits or logistical oversight.</p>
         
         <form action="https://formspree.io/f/mqegekon" method="POST">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
                 <div class="form-group">
                     <label>Agency Name</label>
                     <input type="text" name="agency_name" required>
@@ -83,6 +83,10 @@
                 <div class="form-group">
                     <label>Contact Name & Title</label>
                     <input type="text" name="contact_title" required>
+                </div>
+                <div class="form-group">
+                    <label>Email or Phone</label>
+                    <input type="text" name="contact_info" placeholder="Direct line or email" required>
                 </div>
             </div>
 
