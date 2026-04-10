@@ -20,7 +20,7 @@
     <div>
         <a href="index.html">Legal Consulting</a>
         <a href="agency.html" style="color: var(--secondary); font-weight: bold;">EMS Agency Consulting</a>
-        <a href="#contact">Contact</a>
+        <a href="#agency-contact">Contact</a>
     </div>
 </nav>
 
@@ -32,7 +32,7 @@
         <span class="brand-name-top">EMS Operational Oversight</span>
         <h1 style="font-weight:300;">Ensuring Regulatory Readiness</h1>
         <p style="color: #d1d1d1; font-style: italic; margin-bottom: 1.5rem;">PPAEMA/DEA Compliance, Clinical Auditing, and Logistical Integrity</p>
-        <a href="#contact" class="cta-button" style="background: var(--primary);">Schedule an Agency Audit</a>
+        <a href="#agency-contact" class="cta-button" style="background: var(--primary);">Schedule an Agency Audit</a>
     </div>
 </header>
 
@@ -68,11 +68,45 @@
         *Includes standard rates for PPAEMA Compliance Reviews and Logistical Integrity Audits.
     </p>
 </section>
-    
-<section id="contact" style="background: var(--white); padding: 4rem 2rem; text-align: center; border-top: 1px solid #eee;">
-    <h2 style="color: var(--primary);">Initialize Agency Consultation</h2>
-    <p>Contact us to discuss readiness assessments or logistical oversight for your service.</p>
-    </section>
+
+<section id="agency-contact" style="background: var(--white); padding: 5rem 2rem;">
+    <div class="contact-container" style="border-top: 5px solid var(--secondary); max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 0.5rem;">Initialize Agency Consultation</h2>
+        <p style="text-align: center; margin-bottom: 2.5rem; color: #666;">Request a formal proposal for readiness audits or logistical oversight.</p>
+        
+        <form action="https://formspree.io/f/mqegekon" method="POST">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="form-group">
+                    <label>Agency Name</label>
+                    <input type="text" name="agency_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Name & Title</label>
+                    <input type="text" name="contact_title" required>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label>Primary Service Interest</label>
+                <select name="service_interest" style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; width: 100%;">
+                    <option value="DEA Compliance Audit">PPAEMA / DEA Compliance Audit</option>
+                    <option value="Clinical Auditing">Clinical Discrepancy Auditing</option>
+                    <option value="RFID/Logistics">RFID / Logistical Integrity Review</option>
+                    <option value="Policy/Training">Policy Development & Training</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Operational Overview / Message</label>
+                <textarea name="message" rows="5" required placeholder="Briefly describe your agency's current needs..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" style="background: var(--secondary); width: 100%; margin-top: 2rem; font-size: 1.1rem;">
+                Request Formal Proposal
+            </button>
+        </form>
+    </div>
+</section>
 
 <footer>
     <p>&copy; 2026 Central Wisconsin EMS-Legal Consulting LLC℠. 306 Cedar St, Nekoosa, WI 54457</p>
